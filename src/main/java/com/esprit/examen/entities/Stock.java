@@ -34,12 +34,10 @@ public class Stock implements Serializable {
 		super();
 		this.libelleStock = libelleStock;
 		this.qte = qte;
-<<<<<<< HEAD
 		this.qteMin = qteMin; //testcomment
-=======
 		this.qteMin = qteMin; //git-test
 		//git-test-2
->>>>>>> stock-management
+		//git test 3
 	}
 
 }
