@@ -32,7 +32,7 @@ public class ProduitRestController {
 	@GetMapping("/retrieve-produit/{produit-id}")
 	@ResponseBody
 	public Produit retrieveRayon(@PathVariable("produit-id") Long produitId) {
-		return produitService.retrieveProduit(produitId);
+		return produitService.retrieveProduit(produitId);// return ProduitService
 	}
 
 	/* Ajouter en produit tout en lui affectant la catégorie produit et le stock associés */
@@ -40,7 +40,7 @@ public class ProduitRestController {
 	@PostMapping("/add-produit")
 	@ResponseBody
 	public Produit addProduit(@RequestBody Produit p) {
-		Produit produit = produitService.addProduit(p);
+		Produit produit = produitService.addProduit(p);//SamehSlma
 		return produit;
 	}
 
