@@ -15,7 +15,7 @@ public class StockServiceImpl implements IStockService {
 
 	@Autowired
 	StockRepository stockRepository;
-
+	//test comment
 
 	@Override
 	public List<Stock> retrieveAllStocks() {
