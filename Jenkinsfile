@@ -44,8 +44,8 @@ pipeline {
 		stage('NEXUS'){
             steps{
                 echo "nexus"
-                sh ' mvn deploy -DskipTests=true'
-                sh 'mvn -Dmaven.test.skip=true -Dmaven.test.failure.ignore=true deploy:deploy-file 
+                
+                sh 'mvn deploy -DskipTests=true -Dmaven.test.skip=true -Dmaven.test.failure.ignore=true deploy:deploy-file 
                 -DgroupId=com.esprit.examen -DartifactId=tpAchatProject 
                 -Dversion=1.0 -DgeneratePom=true -Dpackaging=jar 
                 -DrepositoryId=deploymentRepo 
