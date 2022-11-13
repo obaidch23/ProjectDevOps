@@ -51,9 +51,10 @@ pipeline {
 		stage('Login') {
 
 			steps {
-				sh 'docker login -u $obaidch --password $Obaidch23'
+
+				sh 'docker login -u obaidch -p Obaidch23'
 			}
-		}
+        }
 
 		stage('Push') {
 
