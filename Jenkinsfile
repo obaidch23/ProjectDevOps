@@ -45,20 +45,20 @@ pipeline {
         		stage('Build') {
 
 			steps {
-				sh 'docker build -t obaidch/spring-app .'
+				sh 'sudo docker build -t obaidch/spring-app .'
 			}
 		}
 
 		stage('Push') {
 
 			steps {
-				sh 'docker push obaidch/spring-app'
+				sh 'sudo docker push obaidch/spring-app'
 			}
 		}
 		stage('Docker-Compose Up') {
 
 			steps {
-				sh 'docker-compose up'
+				sh 'sudo docker-compose up'
 			}
 		}
     }
