@@ -45,7 +45,7 @@ pipeline {
         		stage('Build') {
 
 			steps {
-				sh 'sudo docker build -t obaidch/spring-app .'
+				sh 'docker build -t obaidch/spring-app .'
 			}
 		}
 
