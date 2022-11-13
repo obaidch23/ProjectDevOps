@@ -28,8 +28,12 @@ pipeline {
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     stage ('Maven Test Sonar') {
+=======
+       stage ('Maven Test Sonar') {
+>>>>>>> c92db873f10f9a0688954cca5360dbc59557923e
 =======
        stage ('Maven Test Sonar') {
 >>>>>>> c92db873f10f9a0688954cca5360dbc59557923e
@@ -46,6 +50,11 @@ pipeline {
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    }
+    
+>>>>>>> c92db873f10f9a0688954cca5360dbc59557923e
 =======
     }
     
