@@ -51,7 +51,7 @@ pipeline {
 		stage('Login') {
 
 			steps {
-				sh 'echo $dockerhub_PSW | docker login -u $obaidch --password $Obaidch23'
+				sh 'docker login -u $obaidch --password $Obaidch23'
 			}
 		}
 
