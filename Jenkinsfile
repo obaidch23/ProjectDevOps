@@ -39,13 +39,19 @@ pipeline {
        
         stage ('Maven Test JUnit') {
             steps {
-                sh "mvn test"
+                sh 'mvn test'
             }
         }
         		stage('Build') {
 
 			steps {
 				sh 'docker build -t obaidch/spring-app .'
+			}
+		}
+		stage('Login') {
+
+			steps {
+				sh 'echo $dockerhub_PSW | docker login -u $obaidch --password $Obaidch23'
 			}
 		}
 
