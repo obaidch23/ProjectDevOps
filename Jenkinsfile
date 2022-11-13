@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout GIT') {
             steps {
                 echo 'Pulling';
-                git branch: 'CategorieProduit-management',
+                git branch: 'CategoriePrpduit_management',
                 url:'https://github.com/obaidch23/ProjectDevOps.git'
             }
         }
