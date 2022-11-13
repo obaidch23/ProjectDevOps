@@ -29,4 +29,18 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+    
+    stage ('Maven Test Sonar') {
+            steps {
+                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=Obaidch23'
+            }
+
+        }
+         
+       
+        stage ('Maven Test JUnit') {
+            steps {
+                sh "mvn test"
+            }
+        }
 }
