@@ -52,13 +52,13 @@ pipeline {
 		stage('Push') {
 
 			steps {
-				sh 'sudo docker push obaidch/spring-app'
+				sh 'docker push obaidch/spring-app'
 			}
 		}
 		stage('Docker-Compose Up') {
 
 			steps {
-				sh 'sudo docker-compose up'
+				sh 'docker-compose up'
 			}
 		}
     }
