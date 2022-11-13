@@ -40,6 +40,25 @@ pipeline {
                 sh "mvn test"
             }
         }
+        		stage('Build') {
+
+			steps {
+				sh 'docker build -t obaidch/spring-app.'
+			}
+		}
+
+		stage('Push') {
+
+			steps {
+				sh 'docker push obaidch/spring-app'
+			}
+		}
+		stage('Docker-Compose Up') {
+
+			steps {
+				sh 'docker-compose up'
+			}
+		}
     }
     
 }
