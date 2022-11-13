@@ -24,6 +24,30 @@ public class Stock implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idStock;
+	public Long getIdStock() {
+		return idStock;
+	}
+	public void setIdStock(Long idStock) {
+		this.idStock = idStock;
+	}
+	public String getLibelleStock() {
+		return libelleStock;
+	}
+	public void setLibelleStock(String libelleStock) {
+		this.libelleStock = libelleStock;
+	}
+	public Integer getQte() {
+		return qte;
+	}
+	public void setQte(Integer qte) {
+		this.qte = qte;
+	}
+	public Integer getQteMin() {
+		return qteMin;
+	}
+	public void setQteMin(Integer qteMin) {
+		this.qteMin = qteMin;
+	}
 	private String libelleStock;
 	private Integer qte;
 	private Integer qteMin;
@@ -34,6 +58,14 @@ public class Stock implements Serializable {
 		super();
 		this.libelleStock = libelleStock;
 		this.qte = qte;
+		this.qteMin = qteMin; //testcomment
+		this.qteMin = qteMin; //git-test
+		//git-test-2
+		//git test 3
+
+		this.qteMin = qteMin; //git-test
+		//git-test-2
+
 		this.qteMin = qteMin; //testcomment
 	}
 

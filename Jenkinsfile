@@ -9,9 +9,7 @@ pipeline {
                 url:'https://github.com/obaidch23/ProjectDevOps.git'
             }
         }
-    }
-    
-    stage ('Maven Clean') {
+        stage ('Maven Clean') {
             steps {
 
                 sh 'mvn clean'
@@ -29,8 +27,12 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+<<<<<<< HEAD
     
     stage ('Maven Test Sonar') {
+=======
+       stage ('Maven Test Sonar') {
+>>>>>>> c92db873f10f9a0688954cca5360dbc59557923e
             steps {
                 sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=12345***'
             }
@@ -43,4 +45,9 @@ pipeline {
                 sh "mvn test"
             }
         }
+<<<<<<< HEAD
+=======
+    }
+    
+>>>>>>> c92db873f10f9a0688954cca5360dbc59557923e
 }
