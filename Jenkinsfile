@@ -29,7 +29,7 @@ pipeline {
         }
        stage ('Maven Test Sonar') {
             steps {
-                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=Obaidch23'
+                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=12345***'
             }
 
         }
