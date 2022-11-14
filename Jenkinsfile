@@ -1,6 +1,10 @@
 pipeline {
     agent any
-
+	environment { 
+	          registry = "samehslama/spring-app" 
+	          registryCredential = 'dockerHub' 
+	          dockerImage = 'spring-app' 
+	 }
     stages {
         stage('Checkout GIT') {
             steps {
@@ -31,7 +35,7 @@ pipeline {
         }
        stage ('Maven Test Sonar') {
             steps {
-                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=Obaidch23'
+                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=sonar'
             }
 
         }
@@ -42,6 +46,20 @@ pipeline {
                 sh "mvn test"
             }
         }
+        stage('Docker Build') {
+
+			steps {
+				sh 'docker login -u samehslama -p @SlamaSameh@'
+				sh 'docker build -t samehslama/spring-app .'
+			}
+		}
+		stage('Docker Push') {
+
+			steps {
+				sh 'docker login -u samehslama -p @SlamaSameh@'
+				sh 'docker push samehslama/spring-app'
+			}
+		}
     }
     
     
