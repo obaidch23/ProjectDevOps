@@ -48,6 +48,14 @@ pipeline {
                 
             }
         }
+        
+        stage('Docker-Compose Up') {
+
+			steps {
+				sh 'docker-compose up'
+			}
+		}
+
 
 		
 		
