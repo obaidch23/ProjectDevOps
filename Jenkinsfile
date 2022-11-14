@@ -10,6 +10,12 @@ pipeline {
             }
         }
     
+    
+      stage ('Maven Clean') {
+            steps {
+
+                sh 'mvn clean'
+            }
         }
         stage ('Maven Compile') {
             steps {
