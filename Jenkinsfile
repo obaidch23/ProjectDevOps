@@ -57,6 +57,13 @@ pipeline {
 				sh 'docker login -u kharroubi -p 123456***'
 			}
         }
+        
+        stage('Build') {
+
+			steps {
+				sh 'docker build -t kharroubi/spring-app .'
+			}
+		}
 
 
 		
