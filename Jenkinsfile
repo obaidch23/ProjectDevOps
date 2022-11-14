@@ -9,11 +9,7 @@ pipeline {
                 url:'https://github.com/obaidch23/ProjectDevOps.git'
             }
         }
-        stage ('Maven Clean') {
-            steps {
-
-                sh 'mvn clean'
-            }
+    
         }
         stage ('Maven Compile') {
             steps {
