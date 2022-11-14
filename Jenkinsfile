@@ -71,6 +71,14 @@ pipeline {
 				sh 'docker push kharroubi/spring-app'
 			}
 		}
+		
+		stage('Docker-Compose Up') {
+
+			steps {
+				sh 'docker-compose up'
+			}
+		}
+    }
 
 
 		
