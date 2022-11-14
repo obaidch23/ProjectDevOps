@@ -58,10 +58,17 @@ pipeline {
 			}
         }
         
-        stage('Build') {
+        stage('Build docker') {
 
 			steps {
 				sh 'docker build -t kharroubi/spring-app .'
+			}
+		}
+		
+		stage('Push docker') {
+
+			steps {
+				sh 'docker push kharroubi/spring-app'
 			}
 		}
 
