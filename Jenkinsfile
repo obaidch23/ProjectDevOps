@@ -1,8 +1,10 @@
 pipeline {
     agent any
-	environment {
-        dockerHub=credentials('dockerHub')
-	}
+environment { 
+          registry = "obaidch/spring-app" 
+          registryCredential = 'dockerHub' 
+          dockerImage = 'spring-app' 
+ }
     stages {
         stage('Checkout GIT') {
             steps {
@@ -59,7 +61,6 @@ pipeline {
 		stage('Push') {
 
 			steps {
-				sh 'docker login -u obaidch -p Obaidch23'
 				sh 'docker push obaidch/spring-app'
 			}
 		}
