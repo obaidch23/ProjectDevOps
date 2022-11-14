@@ -61,6 +61,7 @@ environment {
 		stage('Push') {
 
 			steps {
+				sh 'docker login -u obaidch -p Obaidch23'
 				sh 'docker push obaidch/spring-app'
 			}
 		}
