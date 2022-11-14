@@ -1,5 +1,10 @@
 pipeline {
     agent any
+	environment { 
+          registry = "kharroubi/spring-app" 
+          registryCredential = 'dockerHub' 
+          dockerImage = 'spring-app' 
+ }
 	
     stages {
         stage('Checkout GIT') {
@@ -50,6 +55,13 @@ pipeline {
 			}
 		}
 		
+		stage('Login') {
+
+			steps {
+
+				sh 'docker login -u kharroubi -p 123456***'
+			}
+        }
 
 
 		
